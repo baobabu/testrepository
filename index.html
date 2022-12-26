@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <title>Lamoda</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: black;">
+            <div class="col-md-1" style="margin-left: 150px;">
+                <select class="form-select" name="gruppa" style="background-color: black; color: rgb(255, 255, 255);"><option selecated>г. Москва</option><option value="Санкт-Петербург">г. Санкт-Петербург</option><option value="Московская область">Московская область</option></select>
+            </div>
+        </div>
+        <center><div class="row">
+            <div class="col-md-1" style="margin-top: 40px; margin-left: 100px;">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-warning active" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">
+                        Мужчинам
+                    </label>
+                    <input class="btn btn-warning" type="button" value="Женщинам" onclick="PER()" style="background-color: rgb(255, 255, 255); border-color: black">
+                    <label class="btn btn-warning" style="background-color: rgb(255, 255, 255); border-color: black">
+                        Детям
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8" style=" margin-top: 40px;">
+                <center><img src="FOTO/Lamoda_logo.svg.png" alt="" style="height: 40px;"></center>
+            </div>
+            <div class="col-md-2" style="margin-top: 40px;">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <input class="btn btn-warning" type="button" value="Войти" onclick="PER2()" style="background-color: rgb(255, 255, 255); border-color: black">
+                    <input class="btn btn-warning" type="button" value="Корзина" onclick="OTPRAVIT()" style="background-color: rgb(255, 255, 255); border-color: black">
+                </div>
+            </div>
+        </div> </center>
+        <form name="menu">
+            <div class="row" style="margin-top: 40px; margin-left: 100px; margin-right: 100px;">
+                <div class="col-md-2">
+                    МЕНЮ
+                </div>
+            <form name="zak">
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/Image393824.jpg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;" id="izbtov1">
+                        <div class="card-body">
+                            <p>PUMA</p><!-- ТОВАР 1-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">12 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k1" onclick="otpravka1();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/100029595385b0.webp" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>ABIBAS</p><!-- ТОВАР 2-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">1 400 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k2" onclick="otpravka2();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/FRONT.jpg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>NIKE</p><!-- ТОВАР 3-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">20 500 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k3" onclick="otpravka3();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/IMG_2153.jpg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>NORTH FACE</p><!-- ТОВАР 4-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">44 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k4" onclick="otpravka4();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px; margin-left: 100px; margin-right: 100px;">
+                <div class="col-md-2"></button>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/joutsen_puhovik_ahto_09_1.jpg" alt="..." style="height: 300px; width: 200px;margin-top: 20px;">
+                        <div class="card-body">
+                            <p>NORTH FACE</p><!-- ТОВАР 5-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">11 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k5" onclick="otpravka5();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/joutsen_puhovik_koski_09_1.jpg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p><!-- ТОВАР 6-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">13 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k6" onclick="otpravka6();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/323627062.jpeg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p><!-- ТОВАР 7-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">14 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k7" onclick="otpravka7();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/4795968_2.webp" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p><!-- ТОВАР 8-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">17 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k8" onclick="otpravka8();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px; margin-left: 100px; margin-right: 100px;">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/images (1).jpeg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p><!-- ТОВАР 9-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">12 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k9" onclick="otpravka9();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/images.jpeg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p><!-- ТОВАР 10-->
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">18 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k10" onclick="otpravka10();reload_interval(500); return false;">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/4795982_1.jpg" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p>
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">12 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k11">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style=" align-items: center;">
+                        <img class="card-img-top" src="FOTO/584cbf53c517cfc931f59fd0b173ddfb.webp" alt="..." style="height: 300px; width: 200px; margin-top: 20px;">
+                        <div class="card-body">
+                            <p>PUMA</p>
+                            <p class="text-muted">Куртка утепленная</p>
+                            <p class="text-danger">18 000 ₽</p>
+                            <button type="button" class="btn btn-secondary btn-sm" name="k12">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="yvid" class="alert alert-success d-flex align-items-center" role="alert" data-bs-dismiss="alert" style="position: fixed; bottom: 15px; left: 0; right: 0; max-width: 360px; margin: 0 auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <div>
+                        Товар добавлен в корзину 
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </form>
+        </form>                                                                                                                                                                           
+    <script>
+        document.getElementById("yvid").style.visibility = "hidden";
+        function reload_interval(time){
+            setTimeout(function(){
+                location.reload();
+            },time);
+        }
+        function otpravka1(){
+            let forma = document.forms.zak;
+            let nazbr1 = "PUMA";
+            let naztov1 = "Куртка утепленная"
+            let cento1 = 12000;
+            sessionStorage.setItem("nazbrr1", nazbr1)
+            sessionStorage.setItem("naztovv1", naztov1);
+            sessionStorage.setItem("centoo1", cento1);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;                  
+        }
+        function otpravka2(){
+            let forma = document.forms.zak;
+            let nazbr2 = "ABIBAS";
+            let naztov2 = "Куртка утепленная"
+            let cento2 = 1400;
+            sessionStorage.setItem("nazbrr2", nazbr2)
+            sessionStorage.setItem("naztovv2", naztov2);
+            sessionStorage.setItem("centoo2", cento2);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka3(){
+            let forma = document.forms.zak;
+            let nazbr3 = "NIKE";
+            let naztov3 = "Куртка утепленная"
+            let cento3 = 20500;
+            sessionStorage.setItem("nazbrr3", nazbr3)
+            sessionStorage.setItem("naztovv3", naztov3);
+            sessionStorage.setItem("centoo3", cento3);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka4(){
+            let forma = document.forms.zak;
+            let nazbr4 = "NORTH FACE";
+            let naztov4 = "Куртка утепленная"
+            let cento4 = 44000;
+            sessionStorage.setItem("nazbrr4", nazbr4)
+            sessionStorage.setItem("naztovv4", naztov4);
+            sessionStorage.setItem("centoo4", cento4);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka5(){
+            let forma = document.forms.zak;
+            let nazbr5 = "NORTH FACE";
+            let naztov5 = "Куртка утепленная"
+            let cento5 = 11000;
+            sessionStorage.setItem("nazbrr5", nazbr5)
+            sessionStorage.setItem("naztovv5", naztov5);
+            sessionStorage.setItem("centoo5", cento5);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka6(){
+            let forma = document.forms.zak;
+            let nazbr6 = "PUMA";
+            let naztov6 = "Куртка утепленная"
+            let cento6 = 13000;
+            sessionStorage.setItem("nazbrr6", nazbr6)
+            sessionStorage.setItem("naztovv6", naztov6);
+            sessionStorage.setItem("centoo6", cento6);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka7(){
+            let forma = document.forms.zak;
+            let nazbr7 = "PUMA";
+            let naztov7 = "Куртка утепленная"
+            let cento7 = 14000;
+            sessionStorage.setItem("nazbrr7", nazbr7)
+            sessionStorage.setItem("naztovv7", naztov7);
+            sessionStorage.setItem("centoo7", cento7);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka8(){
+            let forma = document.forms.zak;
+            let nazbr8 = "PUMA";
+            let naztov8 = "Куртка утепленная"
+            let cento8 = 17000;
+            sessionStorage.setItem("nazbrr8", nazbr8)
+            sessionStorage.setItem("naztovv8", naztov8);
+            sessionStorage.setItem("centoo8", cento8);
+            document.getElementById("yvid").style.visibility = "visible";
+            return;
+        }
+        function otpravka9(){
+            let forma = document.forms.zak;
+            let nazbr9 = "PUMA";
+            let naztov9 = "Куртка утепленная"
+            let cento9 = 12000;
+            sessionStorage.setItem("nazbrr9", nazbr9)
+            sessionStorage.setItem("naztovv9", naztov9);
+            sessionStorage.setItem("centoo9", cento9);
+            document.getElementById("yvid").style.visibility = "visible";
+        }
+        function otpravka10(){
+            let forma = document.forms.zak;
+            let nazbr10 = "PUMA";
+            let naztov10 = "Куртка утепленная"
+            let cento10 = 18000;
+            sessionStorage.setItem("nazbrr10", nazbr10)
+            sessionStorage.setItem("naztovv10", naztov10);
+            sessionStorage.setItem("centoo10", cento10);
+            document.getElementById("yvid").style.visibility = "visible";
+        }
+        function OTPRAVIT(){
+            setTimeout (function OTPRAVI(){
+                window.open("cor.html")}, 2000);
+        }
+        function PER(){
+            setTimeout (function OTPRAV(){
+                window.open("zen.html")}, 2000);
+        }
+        function PER2(){
+            setTimeout (function OTPRAV(){
+                window.open("regvxod.html")}, 2000);
+        }
+        function OTP(){
+            let forma = document.forms;
+            let kol_vo_tov = 0;
+            let vopros1 = forma.k1.value;
+            let vopros2 = forma.k2.value;
+            let vopros3 = forma.k3.value;
+            let vopros4 = forma.k4.value;
+            let vopros5 = forma.k5.value;
+            let vopros6 = forma.k6.value;
+            let vopros7 = forma.k7.value;
+            let vopros8 = forma.k8.value;
+            let vopros9 = forma.k9.value;
+            let vopros10 = forma.k10.value;
+            let vopros11 = forma.k11.value;
+            let vopros12 = forma.k12.value;
+            if(vopros1 == "1"){
+                kol_vo_tov++;
+            }
+            if(vopros2 == "1"){
+                kol_vo_tov++;
+            }
+            if(vopros3 == "1"){
+                kol_vo_tov++;
+            }
+            if(vopros4 == "1"){
+                kol_vo_tov++;
+            }
+            sessionStorage.setItem("tovar", kol_vo_tov);
+        }
+    </script>  
+</body>
+</html>
